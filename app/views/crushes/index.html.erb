@@ -1,0 +1,10 @@
+<h1>Add Crush</h1>
+  <% @final_rels.each do |crush| %>
+  <tr>
+  	<li><%= crush[0].name %></li>
+  	<li><%= crush[1].name %></li>
+  	<img src=<%= crush[2] %> alt=<%= crush[0].name %> width=200 height=200></img>
+  	<img src=<%= crush[3] %> alt=<%= crush[1].name %> width=200 height=200></img>
+  	<br></br>
+  </tr>
+  <% end %>
