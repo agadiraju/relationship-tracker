@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130929011423) do
+ActiveRecord::Schema.define(version: 20130929045147) do
+
+  create_table "friends", force: true do |t|
+    t.string   "name"
+    t.string   "uid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "relationships", force: true do |t|
+    t.string  "friend_one_uid"
+    t.string  "friend_two_uid"
+    t.integer "user_id_one"
+    t.integer "user_id_two"
+  end
 
   create_table "users", force: true do |t|
     t.string   "provider"
